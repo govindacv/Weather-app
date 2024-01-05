@@ -1,6 +1,7 @@
 import {createBrowserRouter} from 'react-router-dom'
 import App from '../src/App'
 import WelcomeToWeatherApp from '../components/WelcomeToWeatherApp'
+import WeatherInfo from '../components/Weather-info'
 const AppRouter =createBrowserRouter(
     [
         {
@@ -10,6 +11,11 @@ const AppRouter =createBrowserRouter(
                 {
                     index:true,
                     element:<WelcomeToWeatherApp/>
+                }
+                ,
+                {
+                    path:`/weather-info`,
+                    element:<WeatherInfo/>
                 }
             ]
         }
