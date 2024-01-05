@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/weather-info.css'
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import '../styles/welcome.css'
 
 const arr:any=[]

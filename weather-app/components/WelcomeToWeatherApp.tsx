@@ -9,7 +9,7 @@ const WelcomeToWeatherApp: React.FC<{}> = () => {
     const inputRef = useRef<HTMLInputElement | null>(null);
     const navigate = useNavigate();
     const [loc, setLoc] = useState('');
-    const [locData, setLocData] = useState([]);
+    const [_locData, setLocData] = useState([]);
     const [count, setCount] = useState(0);
 
     const handleOnClick = () => {
@@ -36,7 +36,7 @@ const WelcomeToWeatherApp: React.FC<{}> = () => {
         }
     }, [loc, arr]);
     let filteredArray:any=[]
-    filteredArray=arr.filter((item:any,index:number)=>(index<3))
+    filteredArray=arr.filter((_item:any,index:number)=>(index<3))
     console.log(filteredArray);
     
 
@@ -53,7 +53,8 @@ const WelcomeToWeatherApp: React.FC<{}> = () => {
                            
                         })
                         .catch((error)=>{
-                            alert("you are not in this world")
+                            console.log(error);
+                            
                         })
                        
                     }
